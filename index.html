@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveRider - Premium Surfboard Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="image/logo.jpg" alt="WaveRider" class="logo-img">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#boards">Boards</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="#home" onclick="closeMobileMenu()">Home</a>
+                <a href="#boards" onclick="closeMobileMenu()">Boards</a>
+                <a href="#about" onclick="closeMobileMenu()">About</a>
+                <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Ride the Perfect Wave</h1>
+            <p>Premium surfboard rentals for every skill level. From longboards to performance shortboards, we've got your perfect ride waiting.</p>
+            <a href="#boards" class="cta-button">Explore Boards</a>
+        </div>
+    </section>
+
+    <section id="boards" class="catalog">
+        <div class="container">
+            <h2 class="section-title">Choose Your Board</h2>
+            
+            <div class="filter-tabs">
+                <div class="filter-tab active" data-filter="all">All Boards</div>
+                <div class="filter-tab" data-filter="beginner">Beginner</div>
+                <div class="filter-tab" data-filter="intermediate">Intermediate</div>
+                <div class="filter-tab" data-filter="expert">Expert</div>
+                <div class="filter-tab" data-filter="longboard">Longboards</div>
+            </div>
+
+            <div class="surfboard-grid" id="surfboard-grid">
+                <!-- Surfboard 1 -->
+                <div class="surfboard-card beginner longboard">
+                    <div class="card-image has-image">
+                        <img src="image/longboard.jpg">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Classic Longboard</h3>
+                        <p class="card-description">Perfect for beginners and those who love a smooth, stable ride</p>
+                        <div class="card-features">
+                            <span class="feature-tag">9'6" length</span>
+                            <span class="feature-tag">Stable</span>
+                            <span class="feature-tag">Fiberglass</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$35/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(1, 'Classic Longboard')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="surfboard-card beginner longboard">
+                    <div class="card-image has-image">
+                        <img src="image/longboard3.jpg">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Classic Longboard</h3>
+                        <p class="card-description">Perfect for beginners and those who love a smooth, stable ride</p>
+                        <div class="card-features">
+                            <span class="feature-tag">9'6" length</span>
+                            <span class="feature-tag">Stable</span>
+                            <span class="feature-tag">Fiberglass</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$35/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(1, 'Classic Longboard')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surfboard 2 -->
+                <div class="surfboard-card expert shortboard">
+                    <div class="card-image has-image">
+                        <img src="image/hardboard.JPG">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Performance Shortboard</h3>
+                        <p class="card-description">High-performance board for experienced surfers</p>
+                        <div class="card-features">
+                            <span class="feature-tag">5'7" length</span>
+                            <span class="feature-tag">Lightweight</span>
+                            <span class="feature-tag">Carbon fiber</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$45/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(2, 'Performance Shortboard')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="surfboard-card expert shortboard">
+                    <div class="card-image has-image">
+                        <img src="image/hardboard1.JPG">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Performance Shortboard</h3>
+                        <p class="card-description">High-performance board for experienced surfers</p>
+                        <div class="card-features">
+                            <span class="feature-tag">5'5" length</span>
+                            <span class="feature-tag">Lightweight</span>
+                            <span class="feature-tag">Carbon fiber</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$45/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(2, 'Performance Shortboard')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="surfboard-card expert shortboard">
+                    <div class="card-image has-image">
+                        <img src="image/hardboard2.jpg">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Performance Shortboard</h3>
+                        <p class="card-description">High-performance board for experienced surfers</p>
+                        <div class="card-features">
+                            <span class="feature-tag">5'8" length</span>
+                            <span class="feature-tag">Lightweight</span>
+                            <span class="feature-tag">Carbon fiber</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$45/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(2, 'Performance Shortboard')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surfboard 3 -->
+                <div class="surfboard-card intermediate fish">
+                    <div class="card-image has-image">
+                        <img src="image/fishtail.jpg">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Fish Tail</h3>
+                        <p class="card-description">Great for smaller waves and quick maneuvers</p>
+                        <div class="card-features">
+                            <span class="feature-tag">5'2" length</span>
+                            <span class="feature-tag">Twin fin</span>
+                            <span class="feature-tag">Wide tail</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$40/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(3, 'Fish Board')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surfboard 4 -->
+                <div class="surfboard-card intermediate funboard">
+                    <div class="card-image has-image">
+                        <img src="image/kneeboard.jpg">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Funboard</h3>
+                        <p class="card-description">Versatile mid-length board perfect for progression</p>
+                        <div class="card-features">
+                            <span class="feature-tag">5'2" length</span>
+                            <span class="feature-tag">Versatile</span>
+                            <span class="feature-tag">PU foam</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$38/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(4, 'Funboard')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surfboard 5 -->
+                <div class="surfboard-card intermediate longboard">
+                    <div class="card-image has-image">
+                        <img src="image/hardboard4.jpg">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Short Board</h3>
+                        <p class="card-description">Classic styling with modern performance</p>
+                        <div class="card-features">
+                            <span class="feature-tag">8'6" length</span>
+                            <span class="feature-tag">Single fin</span>
+                            <span class="feature-tag">Retro design</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$42/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(5, 'Retro Single Fin')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surfboard 6 -->
+                <div class="surfboard-card expert gun">
+                    <div class="card-image has-image">
+                        <img src="image/kiteboard.jpg">
+                        <div class="board-icon"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Kite Board</h3>
+                        <p class="card-description">For serious surfers tackling big waves</p>
+                        <div class="card-features">
+                            <span class="feature-tag">6'2" length</span>
+                            <span class="feature-tag">Narrow tail</span>
+                            <span class="feature-tag">Heavy glass</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$50/day</span>
+                            <button class="rent-btn" onclick="openBookingModal(6, 'Big Wave Gun')">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact Us</a>
+            </div>
+            
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="https://www.instagram.com/surfsquare.mv?igsh=eDl3ajdwM214anJu" target="_blank" class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                
+                <a href="https://invite.viber.com/?g2=AQBQesvB0IoN5kgszLTLH5l9QTm%2FoYaiPkS99ICWJEa1IMVxO7Q%2FP0phJKO6aGa3" class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.636 18.017.636 18.017l-.007 1.98 2.026-.019s5.11.067 8.239 0c3.128-.067 5.638-.657 7.357-2.377 2.313-2.313 2.63-6.453 2.657-8.38.028-1.928.028-7.075-.633-9.817C19.64 6.7 19.034 4.187 17.316 2.467 15.003.344 10.863.028 8.936 0h2.464zm.032 2.16c1.767 0 5.375.245 7.323 2.02 1.55 1.414 1.97 3.6 2.016 5.873.046 2.273-.138 6.542-2.016 8.146-1.878 1.603-4.734 2.11-7.323 2.11s-6.9-.138-6.9-.138v-.829s.032-4.032.098-6.542c.065-2.51.588-4.42 2.016-5.873C8.093 4.652 9.673 2.16 11.432 2.16z"/>
+                        <path d="M11.496 3.803c-3.906 0-7.07 3.164-7.07 7.07s3.164 7.07 7.07 7.07 7.07-3.164 7.07-7.07-3.164-7.07-7.07-7.07zm3.273 11.073l-1.337-.669c-.364-.182-.8-.136-1.104.117l-.76.632c-.182.152-.442.175-.65.058-1.01-.567-1.834-1.392-2.401-2.401-.117-.208-.094-.468.058-.65l.632-.76c.253-.304.299-.74.117-1.104l-.669-1.337c-.208-.416-.702-.598-1.131-.417-.819.347-1.378 1.116-1.378 2.018 0 2.734 2.216 4.95 4.95 4.95.902 0 1.671-.559 2.018-1.378.181-.429-.001-.923-.417-1.131z"/>
+                    </svg>
+                </a>
+                
+                <a href="https://www.facebook.com/share/19YhtHc61t/?mibextid=wwXIfr" target="_blank" class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <p>&copy; 2025 Surf Square Bodu Olhu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h2 id="modal-title">Book Your Surfboard</h2>
+            
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="customer-name">Full Name</label>
+                    <input type="text" id="customer-name" name="customerName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customer-email">Email</label>
+                    <input type="email" id="customer-email" name="customerEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customer-phone">Phone Number</label>
+                    <input type="tel" id="customer-phone" name="customerPhone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rental-date">Rental Date</label>
+                    <input type="date" id="rental-date" name="rentalDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rental-duration">Duration</label>
+                    <select id="rental-duration" name="rentalDuration" required>
+                        <option value="">Select duration</option>
+                        <option value="half-day">Half Day (4 hours) - $25</option>
+                        <option value="full-day">Full Day (8 hours) - $40</option>
+                        <option value="2-days">2 Days - $70</option>
+                        <option value="week">1 Week - $200</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience-level">Experience Level</label>
+                    <select id="experience-level" name="experienceLevel" required>
+                        <option value="">Select your level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Complete Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+</html>
